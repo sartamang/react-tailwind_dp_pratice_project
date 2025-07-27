@@ -5,6 +5,8 @@ import Home from './Page/Blog/Home'
 import Register from './Page/Auth/Register'
 import Login from './Page/Auth/Login'
 import AddBlog from './Page/Blog/AddBlog'
+import EditBlog from './Page/Blog/EditBlog'
+import SingleBlog from './Page/Blog/SingleBlog'
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/addblog' element={<AddBlog />} />
+          <Route path='/blog/add' element={<AddBlog />} />
+          <Route path='/blog/edit' element={<EditBlog />} />
+          <Route path='/blog/id' element={<SingleBlog />} />
         </Routes>
       </BrowserRouter>
     </>
