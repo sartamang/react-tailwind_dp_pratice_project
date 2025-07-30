@@ -2,14 +2,16 @@ import React from 'react'
 import Form from './Components/Form/Form'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { baseUrl } from '../../Config'
 
 const Login = () => {
+ 
 
   const navigate = useNavigate()
 
   const handleLogin = async (data) => {
     try {
-      const response = await axios.post("https://react30-api.onrender.com/api/user/login" , data)
+      const response = await axios.post(`${baseUrl}/login` , data)
       console.log(response)
 
       if (response.status === 200){

@@ -2,6 +2,7 @@ import React from 'react'
 import Form from './Components/Form/Form'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { baseUrl } from '../../Config'
 
 const Register = () => {
 
@@ -9,7 +10,7 @@ const Register = () => {
 
   const handleRegister = async (data) => {
     try {
-      const response = await axios.post("https://react30-api.onrender.com/api/user/register", data)
+      const response = await axios.post(`${baseUrl}/register`, data)
       console.log(response)
 
       if (response.status === 201){
