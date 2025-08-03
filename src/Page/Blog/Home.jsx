@@ -26,7 +26,7 @@ const Home = () => {
               {
                 blogs.length > 0 && blogs.map ((blog) => {    //yedi blogs chai 0 vanda badi xa vany balla map use hu vanerw banako
                   return(
-                    <Card props={blog}/>
+                    <Card blog={blog}/>
                   )
                 })
               }
